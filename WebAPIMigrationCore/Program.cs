@@ -20,6 +20,8 @@ app.UseRouting();
 app.UseAuthorization();
 app.UseSystemWebAdapters();
 
+app.MapAreaControllerRoute("HelpPage_Default", "HelpPage", "Help/{action=Index}/{apiId?}", new {controller = "Help"});
+
 app.MapDefaultControllerRoute();
 app.MapForwarder("/{**catch-all}", app.Configuration["ProxyTo"]).Add(static builder => ((RouteEndpointBuilder)builder).Order = int.MaxValue);
 
