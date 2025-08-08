@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIMigration", "WebAPIMigration\WebAPIMigration.csproj", "{EE1B3E4F-6DA2-44E4-A212-EB42CE065226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIMigrationCore", "WebAPIMigrationCore\WebAPIMigrationCore.csproj", "{051D7491-DF3A-438B-8DC8-39D11A7EF197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EE1B3E4F-6DA2-44E4-A212-EB42CE065226}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE1B3E4F-6DA2-44E4-A212-EB42CE065226}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE1B3E4F-6DA2-44E4-A212-EB42CE065226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{051D7491-DF3A-438B-8DC8-39D11A7EF197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051D7491-DF3A-438B-8DC8-39D11A7EF197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051D7491-DF3A-438B-8DC8-39D11A7EF197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051D7491-DF3A-438B-8DC8-39D11A7EF197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
