@@ -83,14 +83,14 @@ namespace WebAPIMigration.Areas.HelpPage.ModelDescriptions
 
         private Lazy<IModelDocumentationProvider> _documentationProvider;
 
-        public ModelDescriptionGenerator(HttpConfiguration config)
+        public ModelDescriptionGenerator(IConfiguration config)
         {
             if (config == null)
             {
                 throw new ArgumentNullException("config");
             }
 
-            _documentationProvider = new Lazy<IModelDocumentationProvider>(() => config.Services.GetDocumentationProvider() as IModelDocumentationProvider);
+            //_documentationProvider = new Lazy<IModelDocumentationProvider>(() => config.Services.GetDocumentationProvider() as IModelDocumentationProvider);
             GeneratedModels = new Dictionary<string, ModelDescription>(StringComparer.OrdinalIgnoreCase);
         }
 

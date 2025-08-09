@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using WebAPIMigration.Areas.HelpPage.ModelDescriptions;
-using WebAPIMigration.Areas.HelpPage.Models;
+using System.Web.Http.Description;
 
 namespace WebAPIMigration.Areas.HelpPage.Controllers
 {
@@ -24,20 +23,20 @@ namespace WebAPIMigration.Areas.HelpPage.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
-            return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
+            //ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
+            return View(new List<ApiDescription>());
         }
 
         public ActionResult Api(string apiId)
         {
-            if (!String.IsNullOrEmpty(apiId))
-            {
-                HelpPageApiModel apiModel = Configuration.GetHelpPageApiModel(apiId);
-                if (apiModel != null)
-                {
-                    return View(apiModel);
-                }
-            }
+            //if (!String.IsNullOrEmpty(apiId))
+            //{
+            //    HelpPageApiModel apiModel = Configuration.GetHelpPageApiModel(apiId);
+            //    if (apiModel != null)
+            //    {
+            //        return View(apiModel);
+            //    }
+            //}
 
             return View(ErrorViewName);
         }
@@ -46,12 +45,12 @@ namespace WebAPIMigration.Areas.HelpPage.Controllers
         {
             if (!String.IsNullOrEmpty(modelName))
             {
-                ModelDescriptionGenerator modelDescriptionGenerator = Configuration.GetModelDescriptionGenerator();
-                ModelDescription modelDescription;
-                if (modelDescriptionGenerator.GeneratedModels.TryGetValue(modelName, out modelDescription))
-                {
-                    return View(modelDescription);
-                }
+                //ModelDescriptionGenerator modelDescriptionGenerator = Configuration.GetModelDescriptionGenerator();
+                //ModelDescription modelDescription;
+                //if (modelDescriptionGenerator.GeneratedModels.TryGetValue(modelName, out modelDescription))
+                //{
+                //    return View(modelDescription);
+                //}
             }
 
             return View(ErrorViewName);
