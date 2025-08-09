@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using WebAPIMigration.Areas.HelpPage.ModelDescriptions;

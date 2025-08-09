@@ -1,13 +1,12 @@
-using System;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Collections;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
-using Newtonsoft.Json;
 
 namespace WebAPIMigration.Areas.HelpPage.ModelDescriptions
 {
@@ -84,14 +83,14 @@ namespace WebAPIMigration.Areas.HelpPage.ModelDescriptions
 
         private Lazy<IModelDocumentationProvider> _documentationProvider;
 
-        public ModelDescriptionGenerator(HttpConfiguration config)
+        public ModelDescriptionGenerator(IConfiguration config)
         {
             if (config == null)
             {
                 throw new ArgumentNullException("config");
             }
 
-            _documentationProvider = new Lazy<IModelDocumentationProvider>(() => config.Services.GetDocumentationProvider() as IModelDocumentationProvider);
+            //_documentationProvider = new Lazy<IModelDocumentationProvider>(() => config.Services.GetDocumentationProvider() as IModelDocumentationProvider);
             GeneratedModels = new Dictionary<string, ModelDescription>(StringComparer.OrdinalIgnoreCase);
         }
 
